@@ -77,11 +77,17 @@ describe("5. About Higher Order Functions", function () {
     // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
     var arrayDiff = function(array1, array2) {
-      return array1.filter(function(){
-        return FILL_ME_IN;
+      return array1.filter(function(item){
+        console.log('in filter'{item});
+        
+          
+        })
+        // find not repetitive numbers
+
+        return array2.every(item2 => item != item2);
       });
     };
-
+//                    array1, array2
     expect(arrayDiff([1,2,3], [1,2])).toEqual([3]);
     expect(arrayDiff([1,2,2,2,3], [2])).toEqual([1,3]);
   });
